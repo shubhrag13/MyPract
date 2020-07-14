@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="browser" value="IE"></parameter>
+<parameter name="url" value="http://google.com"></parameter>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="practiceTest.ExtentReportsLogging"></class>
+      <class name="practiceTest.ExtentReportChrome"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

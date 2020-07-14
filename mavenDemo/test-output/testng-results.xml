@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="45335" started-at="2020-07-10T10:26:36Z" finished-at="2020-07-10T10:27:22Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="45335" started-at="2020-07-10T10:26:36Z" finished-at="2020-07-10T10:27:22Z">
+      <class name="practiceTest.ExtentReportsLogging">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:practiceTest.ExtentReportsLogging@327b636c]" name="startUp" is-config="true" duration-ms="176" started-at="2020-07-10T15:56:36Z" finished-at="2020-07-10T15:56:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="login()[pri:0, instance:practiceTest.ExtentReportsLogging@327b636c]" name="login" duration-ms="15019" started-at="2020-07-10T15:56:36Z" finished-at="2020-07-10T15:56:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="end()[pri:0, instance:practiceTest.ExtentReportsLogging@327b636c]" name="end" is-config="true" duration-ms="169" started-at="2020-07-10T15:56:51Z" finished-at="2020-07-10T15:56:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- practiceTest.ExtentReportsLogging -->
+      <class name="practiceTest.ExtentReportChrome">
+        <test-method status="PASS" signature="startUp()[pri:0, instance:practiceTest.ExtentReportChrome@45dd4eda]" name="startUp" is-config="true" duration-ms="100" started-at="2020-07-10T15:56:52Z" finished-at="2020-07-10T15:56:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startUp -->
+        <test-method status="PASS" signature="login()[pri:0, instance:practiceTest.ExtentReportChrome@45dd4eda]" name="login" duration-ms="25671" started-at="2020-07-10T15:56:52Z" finished-at="2020-07-10T15:57:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="end()[pri:0, instance:practiceTest.ExtentReportChrome@45dd4eda]" name="end" is-config="true" duration-ms="4190" started-at="2020-07-10T15:57:17Z" finished-at="2020-07-10T15:57:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end -->
+      </class> <!-- practiceTest.ExtentReportChrome -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

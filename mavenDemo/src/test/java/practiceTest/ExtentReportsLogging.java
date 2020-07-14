@@ -22,14 +22,16 @@ public class ExtentReportsLogging {
 	
 	@BeforeMethod
 	public void startUp() {
-		report = new ExtentReports("E:\\Eclipse-Workspace\\mavenDemo\\ExtentReportsTest.HTML");
+//		report = new ExtentReports("E:\\Eclipse-Workspace\\mavenDemo\\ExtentReportsTest.HTML");
+		report = new ExtentReports("E:\\gitRepo\\mavenDemo\\ExtentReportsTest.HTML");
 		test = report.startTest("ExtentReportsLogging");
 	}
 	
 	@Test
 	public void login() throws Exception {
 		
-		System.setProperty("webdriver.ie.driver", "E:\\Eclipse-Workspace\\Lib\\IEDriverServer.exe");
+//		System.setProperty("webdriver.ie.driver", "E:\\Eclipse-Workspace\\Lib\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", "E:\\gitRepo\\mavenDemo\\Lib\\IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
 		test.log(LogStatus.INFO, "IE is Launched");
 		

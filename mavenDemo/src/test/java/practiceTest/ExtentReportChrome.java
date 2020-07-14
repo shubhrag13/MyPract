@@ -22,14 +22,17 @@ public class ExtentReportChrome {
 	
 	@BeforeMethod
 	public void startUp() {
-		report = new ExtentReports("E:\\Eclipse-Workspace\\mavenDemo\\ExtentReportsTest.HTML", false);
+//		report = new ExtentReports("E:\\Eclipse-Workspace\\mavenDemo\\ExtentReportsTest.HTML", false);
+		report = new ExtentReports("E:\\gitRepo\\\\mavenDemo\\ExtentReportsTest.HTML", false);
 		test = report.startTest("ExtentReportChrome");
 	}
 	
 	@Test
 	public void login() throws Exception {
 		
-		System.setProperty("webdriver.chrome.driver", "E:\\Eclipse-Workspace\\Lib\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "E:\\Eclipse-Workspace\\Lib\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\gitRepo\\mavenDemo\\Lib\\chromedriver.exe");
+		
 		driver = new ChromeDriver();
 		test.log(LogStatus.INFO, "Chrome is Launched");
 		

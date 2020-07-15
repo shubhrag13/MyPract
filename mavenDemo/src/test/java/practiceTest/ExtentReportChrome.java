@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,11 +20,15 @@ public class ExtentReportChrome {
 	ExtentTest test;
 	String title;
 	WebDriver driver;
+	String projDir;
 	
 	@BeforeMethod
 	public void startUp() {
+		projDir = System.getProperty("user.dir");
+		Reporter.log(projDir, true);
 //		report = new ExtentReports("E:\\Eclipse-Workspace\\mavenDemo\\ExtentReportsTest.HTML", false);
-		report = new ExtentReports("E:\\gitRepo\\\\mavenDemo\\ExtentReportsTest.HTML", false);
+		report = new ExtentReports(projDir + "\\ExtentReportsTest.HTML", false);
+//		report = new ExtentReports("E:\\gitRepo\\mavenDemo\\ExtentReportsTest.HTML", false);
 		test = report.startTest("ExtentReportChrome");
 	}
 	
@@ -31,7 +36,8 @@ public class ExtentReportChrome {
 	public void login() throws Exception {
 		
 //		System.setProperty("webdriver.chrome.driver", "E:\\Eclipse-Workspace\\Lib\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "E:\\gitRepo\\mavenDemo\\Lib\\chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", "E:\\gitRepo\\mavenDemo\\Lib\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", projDir + "\\Lib\\chromedriver.exe");
 		
 		driver = new ChromeDriver();
 		test.log(LogStatus.INFO, "Chrome is Launched");
@@ -48,7 +54,7 @@ public class ExtentReportChrome {
 		
 		title = driver.getTitle();
 		test.log(LogStatus.INFO, title);
-		if(title.contains("Reporter") && title.equals("Report")) {
+		if(title.contains("Reporter")) {
 			test.log(LogStatus.PASS, "Search Results are displayed");
 		}else
 			test.log(LogStatus.FAIL, "An issue occurred while performing search");

@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -19,11 +20,14 @@ public class ExtentReportsLogging {
 	WebDriver driver;
 	ExtentReports report;
 	ExtentTest test;
+	String projDir;
 	
 	@BeforeMethod
 	public void startUp() {
+		projDir = System.getProperty("user.dir");
+		Reporter.log(projDir, true);
 //		report = new ExtentReports("E:\\Eclipse-Workspace\\mavenDemo\\ExtentReportsTest.HTML");
-		report = new ExtentReports("E:\\gitRepo\\mavenDemo\\ExtentReportsTest.HTML");
+		report = new ExtentReports(projDir + "\\ExtentReportsTest.HTML");
 		test = report.startTest("ExtentReportsLogging");
 	}
 	
@@ -31,7 +35,7 @@ public class ExtentReportsLogging {
 	public void login() throws Exception {
 		
 //		System.setProperty("webdriver.ie.driver", "E:\\Eclipse-Workspace\\Lib\\IEDriverServer.exe");
-		System.setProperty("webdriver.ie.driver", "E:\\gitRepo\\mavenDemo\\Lib\\IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", projDir + "\\Lib\\IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
 		test.log(LogStatus.INFO, "IE is Launched");
 		
@@ -58,6 +62,8 @@ public class ExtentReportsLogging {
 		report.endTest(test);
 		report.flush();
 		driver.close();
+		driver=null;
+		projDir=null;
 	}
 
 }

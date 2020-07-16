@@ -4,6 +4,12 @@
   <artifactId>mavenDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+    <!-- to set version of JRE to be used -->  
+  <properties>
+  	<maven.compiler.source>1.8</maven.compiler.source>
+  	<maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  
   <build>
         <!-- Source directory configuration -->
         <sourceDirectory>src</sourceDirectory>
@@ -22,12 +28,6 @@
             </plugin>
         </plugins>
     </build>
-  
-  <!-- to set version of JRE to be used -->  
-  <properties>
-  	<maven.compiler.source>1.8</maven.compiler.source>
-  	<maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
   
  <dependencies>
 	<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->

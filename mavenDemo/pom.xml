@@ -4,6 +4,7 @@
   <artifactId>mavenDemo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  
     <!-- to set version of JRE to be used -->  
   <properties>
   	<maven.compiler.source>1.8</maven.compiler.source>
